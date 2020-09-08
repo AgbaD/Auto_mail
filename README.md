@@ -3,8 +3,9 @@ Send personalized emails to multiple addresses at once
 
 ## Usage
 - Provide a csv file the consists of names and emails of recepients
-  e.g name,email
-  
+  e.g 
+      name,email
+
       john,john@example.com
 
       mike,mike@try.com
