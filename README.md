@@ -1,5 +1,5 @@
 # Auto_mail
-Send personalised emails to multiple addresses at once 
+Send personalized emails to multiple addresses at once 
 
 ## Usage
 - Provide a csv file the consists of names and emails of recepients
