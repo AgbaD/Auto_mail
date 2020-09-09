@@ -9,9 +9,9 @@ from getpass import getpass
 
 port = 465
 smtp_server = "smtp.gmail.com"
-sender_email = ""
 
 def send_bulk_mail():
+    sender_email = input("Enter Your email: ")
     print("Input password")
     password = getpass()
 
