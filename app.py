@@ -10,6 +10,7 @@ from getpass import getpass
 port = 465
 smtp_server = "smtp.gmail.com"
 
+
 def send_bulk_mail():
     sender_email = input("Enter Your email: ")
     print("Input password")
@@ -39,9 +40,9 @@ def send_bulk_mail():
             message["From"] = sender_email
             message["To"] = receiver_email
 
-            this_text = text.format('name')
+            this_text = text.format(name)
             try:
-                this_html = html.format('name')
+                this_html = html.format(name)
             except:
                 pass
 
