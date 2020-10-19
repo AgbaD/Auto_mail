@@ -7,9 +7,6 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from getpass import getpass
 
-port = 465
-smtp_server = "smtp.gmail.com"
-
 
 def send_bulk_mail():
     sender_email = input("Enter Your email: ")
@@ -59,13 +56,12 @@ def send_bulk_mail():
                 pass
 
             context = ssl.create_default_context()
-            with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
+            with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
                 server.login(sender_email, password)
+                print(f"Sending email to {name}")
                 server.sendmail(
                     sender_email, receiver_email, message.as_string()
                 )
-
-            print(f"Sending email to {name}")
 
 
 if __name__ == "__main__":
