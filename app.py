@@ -2,7 +2,8 @@
 # Author:   @BlankGodd_
 
 import csv
-import smtplib, ssl
+import smtplib
+import ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from getpass import getpass
@@ -62,6 +63,8 @@ def send_bulk_mail():
                 server.sendmail(
                     sender_email, receiver_email, message.as_string()
                 )
+                print(f"Mail sent to {name} successfully")
+                print()
 
 
 if __name__ == "__main__":
